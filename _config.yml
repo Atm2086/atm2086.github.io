@@ -102,5 +102,5 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repossitory: https://github.com/Atm2086/atm2086.github.io
+  repo: git@github.com:Atm2086/atm2086.github.io.git
   branch: main
