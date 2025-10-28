@@ -7,6 +7,16 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 
 ### Create a new post
 
+``` cpp
+#include <iostream>
+using namespace std;
+int main() {
+    cout<< " hello world!" <<endl;
+    return 0;
+}
+```
+
+
 ``` bash
 $ hexo new "My New Post"
 ```
