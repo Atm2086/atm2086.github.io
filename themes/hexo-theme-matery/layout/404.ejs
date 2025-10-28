@@ -35,6 +35,11 @@
     </script>
 <% } else { %>
     <script>
-        $('.bg-cover').css('background-image', 'url(<%- theme.jsDelivr.url %><%- url_for('/medias/banner/0.jpg') %>)');
+        // 优先使用自定义路径，否则使用默认路径
+        <% if (theme.banner.customUrl) { %>
+            $('.bg-cover').css('background-image', 'url(<%- theme.jsDelivr.url %><%- url_for(theme.banner.customUrl) %>)');
+        <% } else { %>
+            $('.bg-cover').css('background-image', 'url(<%- theme.jsDelivr.url %><%- url_for('/medias/banner/0.jpg') %>)');
+        <% } %>
     </script>
 <% } %>

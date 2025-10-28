@@ -73,8 +73,8 @@ cover:
 dream:
   enable: true
   showTitle: true
-  title: 我的梦想
-  text: 不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+  title: 如梦幻泡影，如露亦如电
+  text: 往往后悔过曾经如何，也每每犹豫过未来如何，但终究走在属于自己的道路上。纵然这个梦看起来微不足道，我仍有将它实现的力量。
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -154,20 +154,20 @@ indexbtn:
   enable: true
   name: Github
   icon: fab fa-github-alt
-  url: https://github.com/blinkfox/hexo-theme-matery
+  url: https://github.com/Atm2086/atm2086.github.io
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github:  https://github.com/blinkfox
-  email: 1181062873@qq.com
+  github:  https://github.com/Atm2086
+  email: zhang_jun_jie@mail.ustc.edu.cn
   facebook: # https://www.facebook.com/xxx
   twitter: # https://twitter.com/xxx
-  qq: 1181062873
+  qq: 1534856536
   weibo: # https://weibo.com/xxx
   zhihu: # https://www.zhihu.com/xxx
-  rss: true # true、false
+  rss: false # true、false
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # You can add `toc: false` to the Front-matter of a post to turn off the TOC.
@@ -188,7 +188,7 @@ code:
 
 # 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
 reward:
-  enable: true
+  enable: false
   title: 你的赏识是我前进的动力
   wechat: /medias/reward/wechat.png
   alipay: /medias/reward/alipay.jpg
@@ -221,7 +221,7 @@ postInfo:
   wordCount: true # 文章字数统计
   totalCount: true # 站点总文章字数
   min2read: true # 文章阅读时长
-  readCount: true # 文章阅读次数
+  readCount: false # 文章阅读次数
 
 # Whether to activate the 'love' effect of clicking on the page.
 # 是否激活点击页面的'爱心'效果，默认激活.
@@ -255,7 +255,7 @@ snowdown:
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
   avatar: /medias/avatar.jpg
-  career: Software Engineer
+  career: Warrior, Guardian, Drawer, Programmer
   introduction: If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.
 
 # config my projects informations in about page.
@@ -311,9 +311,9 @@ mySkills:
 myGallery:
   enable: true
   data:
-    - /medias/featureimages/0.jpg
-    - /medias/featureimages/1.jpg
-    - /medias/featureimages/2.jpg
+    - /medias/featureimages/eva2.jpg
+    - /medias/featureimages/eva3.jpg
+    - /medias/featureimages/eva4.jpg
 
 # Whether to display post-calender in the `archive` page
 # 设置在归档页面中是否显示'文章日历'控件
@@ -407,7 +407,7 @@ changyan:
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
-  enable: true
+  enable: false
   url: https://github.com/blinkfox/hexo-theme-matery
   title: Fork Me
 
@@ -632,6 +632,7 @@ subtitle:
   sub:
     - 从来没有真正的绝境, 只有心灵的迷途
     - Never really desperate, only the lost of the soul
+    - We rise, we fall, we break and we make our mistakes.
 
 # 手机二级菜单.
 navMenu:
@@ -643,11 +644,13 @@ instantpage:
   enable: true
 
 # banner 是否每日切换.
-# 若为 false, 则 banner 默认为 /medias/banner/0.jpg
+# enable: false 时，优先使用 customUrl，若未设置则使用默认的 /medias/banner/0.jpg
+# enable: true 时，根据星期几自动切换 /medias/banner/0-6.jpg
+# random: true 时，从 featureImages 中随机选择图片
 banner:
-  enable: true
-  # 开启随机 featureimages 图片
-  random: true
+  enable: false     # 是否启用每日切换
+  random: false     # 是否随机选择
+  customUrl: /medias/banner/Wallpaper.jpg  # 自定义固定图片路径，留空则使用默认的 /medias/banner/0.jpg
 
 # 中文繁简转换开关
 # 显示在底部 footer 栏
@@ -674,7 +677,7 @@ jsDelivr:
   
 # 网站背景图
 background:
-  enable: false
+  enable: true
   url: "https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg"
 
 # 说说 https://artitalk.js.org/
