@@ -106,12 +106,9 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-matery
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: git@github.com:Atm2086/atm2086.github.io.git
-  branch: main
+# Publishing is handled by .github/workflows/deploy.yml on pushes to hexo.
+# Keep the legacy Git deployer disabled so it cannot recreate the old main branch.
+deploy: {}
 
 search:
   path: search.xml

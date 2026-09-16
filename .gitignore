@@ -8,3 +8,6 @@ public/
 .idea/
 *.iml
 
+# Local tool configuration and repository recovery snapshots
+.mcp.json
+.local-backups/
