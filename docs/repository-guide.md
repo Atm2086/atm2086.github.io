@@ -22,13 +22,13 @@
 
 仓库中的 `.github/workflows/deploy.yml` 在 `hexo` 有新推送时构建 `public/`，通过 `actions/upload-pages-artifact` 和 `actions/deploy-pages` 发布，不需要一个专门保存 HTML 的分支。
 
-GitHub 公开部署记录显示，最新的 `github-pages` 部署创建于 2026-01-17，来源是 `hexo` 的 `6d8dbaa61daeed46d4b21e53030dcefe9da5ba78`，状态为 `success`：
+整理前，GitHub 公开部署记录显示，最近一次 `github-pages` 部署创建于 2026-01-17，来源是 `hexo` 的 `6d8dbaa61daeed46d4b21e53030dcefe9da5ba78`，状态为 `success`：
 
 - [部署记录 API](https://api.github.com/repos/Atm2086/atm2086.github.io/deployments?per_page=3)
 - [仓库工作流](https://github.com/Atm2086/atm2086.github.io/actions)
-- [最新成功的 Pages 发布](https://github.com/Atm2086/atm2086.github.io/actions/runs/21086649741)
+- [整理前成功的 Pages 发布](https://github.com/Atm2086/atm2086.github.io/actions/runs/21086649741)
 
-公开 `/pages` API 返回 404，不能据此认定 Pages 未启用，也不能声称已经读取后台 Pages 设置。删除旧发布分支前，应结合成功部署状态并检查 Settings → Pages 的发布来源为 GitHub Actions。
+公开 `/pages` API 返回 404，未能直接读取后台设置。2026-09-16，用户已在 Settings → Pages 确认发布来源为 GitHub Actions；整理提交 `4f81b26` 的 [Pages 构建与部署也已成功](https://github.com/Atm2086/atm2086.github.io/actions/runs/35048462705)。据此完成旧发布分支清理。
 
 整理前 `_config.yml` 的 `deploy.branch: main` 和 `npm run deploy` 属于另一套旧的 Git 推送部署入口。这正是 `main` 与源码主线混淆的来源之一。本轮本地修改已将 `deploy` 清空并移除该 npm 命令；GitHub Actions 工作流不受影响。
 
@@ -65,8 +65,16 @@ git fetch .local-backups/before-branch-cleanup-2026-09-16.bundle refs/remotes/or
 
 恢复命令不改动当前工作区，也不推送 GitHub。该备份只在这台机器上，可另行复制到自己的备份介质。
 
-## 本轮已完成与待执行
+## 执行结果（2026-09-16）
 
 已完成：更新远程引用，核对分支历史和源码目录，检查公开默认分支、PR、成功部署记录，新增目录与日常开发说明，忽略本机工具配置和备份目录，保存并验证整理前备份，禁用本地旧部署入口，降低 Dependabot 检查频率和版本升级 PR 上限。
 
-执行目标：提交并推送本地整理修改，删除远程 `master`，确认 Pages 设置后删除远程 `main`。依赖 PR 保留，默认分支不变。远程执行结果以实际推送和核查记录为准；上表保留整理前快照，便于追溯和恢复。
+整理提交 `4f81b26` 已推送到 `hexo`，Pages 构建与部署成功。远程 `master` 和旧 `main` 已删除，删除时均校验分支仍指向备份中的提交，并已通过 `git fetch origin --prune` 清理本地远程引用。
+
+最终保留的远程分支：
+
+- `hexo`：唯一长期开发分支，仍是默认分支和 Pages 发布来源。
+- `dependabot/npm_and_yarn/hexo-8.1.2`：保留，对应 PR #5。
+- `dependabot/npm_and_yarn/hexo-renderer-marked-7.0.1`：保留，对应 PR #1。
+
+两个依赖 PR 均未合并或关闭。上表是整理前快照，便于追溯和恢复；日常写作直接使用 `hexo`。

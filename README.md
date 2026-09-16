@@ -52,7 +52,7 @@ git status
 
 ## 单主线开发
 
-目前直接在 `hexo` 写文章、调整主题即可，不需要把内容在 `hexo`、`master`、`main` 之间来回合并。开始前确认没有未提交修改，再同步：
+目前直接在 `hexo` 写文章、调整主题即可。重复的 `master` 和旧网页分支 `main` 已备份并删除，两个依赖升级 PR 暂时保留。开始前确认没有未提交修改，再同步：
 
 ```bash
 git switch hexo
@@ -63,6 +63,6 @@ git pull --ff-only origin hexo
 
 旧的 `npm run deploy` 命令已移除，`_config.yml` 中的 Git 部署目标已清空，避免重新生成旧 `main` 分支。日常发布只需推送源码，由 Actions 完成。旧的 `hexo-deployer-git` 依赖暂时保留，但没有启用的部署目标。
 
-Dependabot 已调整为每周检查，版本升级 PR 最多同时保留 3 个；该配置需要推送到默认分支后生效，不会自动关闭已有 PR，也不限制安全升级 PR 的数量。
+Dependabot 已调整为每周检查，版本升级 PR 最多同时保留 3 个；该配置已推送到默认分支，不会自动关闭已有 PR，也不限制安全升级 PR 的数量。
 
 当前工作流配置 Node 18，依赖锁定 Hexo 7.3.0。升级 Node 和 Hexo 应作为单独变更验证；不能直接合并要求 Node ≥20.19 的 Hexo 8 分支后继续使用现有工作流。
