@@ -62,7 +62,7 @@ Nsight system针对CPU threads：
     - OS runtime libraries usage系统运行库的使用：pthread、文件io调用
     - API的使用：CUDA、cuDNN、cuBLAS、TensorRT
 
-![alt text](image.png)
+![alt text](./Nsight/image-overview.png)
 从上至下：
 
 - CPU相关：黑色代表CPU利用率，灰色代表等待，有颜色代表处于活动状态，不同颜色代表不同CPUcore

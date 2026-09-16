@@ -11,8 +11,8 @@
 
 | 路径 | 用途 |
 | --- | --- |
-| `source/_posts/*.md` | 博客文章，目前 18 篇 |
-| `source/_posts/文章名/` | 对应文章的图片等附件，应与文章一起保留 |
+| `source/_posts/分类/*.md` | 博客文章，目前 18 篇，按现有分类分目录 |
+| `source/_posts/分类/文章名/` | 对应文章的图片等附件，应与文章一起保留 |
 | `source/about/`、`categories/`、`tags/`、`friends/`、`contact/` | 独立页面，均位于 `source/` 下 |
 | `source/_data/friends.json` | 友情链接数据 |
 | `_config.yml` | 站点标题、URL、文章链接、分页、主题等配置 |
@@ -39,10 +39,30 @@ npm run server
 预览地址通常为 <http://localhost:4000>。新建文章：
 
 ```bash
-npx hexo new "文章标题"
+npx hexo new --path "GPU && operator/文章标题" "文章标题"
 ```
 
-编辑 `source/_posts/文章标题.md`，图片放在同名目录中。提交前构建：
+编辑 `source/_posts/GPU && operator/文章标题.md`，图片放在该分类下的同名目录中。`--path` 相对于 `source/_posts/`，分类名包含空格或 `&` 时要保留引号。文章头部也需要填写对应分类：
+
+```yaml
+categories:
+  - GPU && operator
+```
+
+文件夹用于本地整理，网页上的分类由文章头部 `categories` 决定，Hexo 不会根据文件夹自动填写分类。现有目录为：
+
+```text
+source/_posts/
+├── Build System/                          # 1 篇
+├── DL-Framework Learning & infra learning/ # 2 篇
+├── GPU && operator/                       # 2 篇
+├── InfiniCore & InfiniLM 学习/             # 1 篇
+└── 未分类/                                # 12 篇，后续可逐篇归类
+```
+
+移动旧文章时，将 `.md` 和同名图片目录一起移动，再按需要修改文章头部分类。保持原文件名和 `date` 不变：站点链接使用 `:year/:month/:day/:name/`，只取文件名，不受分类目录影响。不同分类下也尽量使用不同文章文件名，避免同一天发布的同名文章发生网址冲突。
+
+提交前构建：
 
 ```bash
 npm run clean
