@@ -19,11 +19,20 @@
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.lightgallery) %>"></script>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.matery) %>"></script>
 
-    <% if (theme.mermaid.enable) { %>
-        <!-- <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script> -->
-        <script src='<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.mermaid) %>'></script>
+    <% if (theme.mermaid.enable || page.mermaid) { %>
+        <style>
+          .mermaid { overflow-x: auto; margin: 1.5rem 0; text-align: center; }
+        </style>
+        <script src='<%- url_for(theme.libs.js.mermaid) %>'></script>
         <script>
           if (window.mermaid) {
+            // Recover diagram text from Markdown/Prism code blocks.
+            document.querySelectorAll('pre > code.language-mermaid, pre > code.mermaid').forEach(function (code) {
+              var diagram = document.createElement('div');
+              diagram.className = 'mermaid';
+              diagram.textContent = code.textContent;
+              code.parentNode.replaceWith(diagram);
+            });
             mermaid.initialize({theme: 'forest'});
           }
         </script>
