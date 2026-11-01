@@ -453,18 +453,22 @@ $ \boldsymbol{y} = F(\boldsymbol{x}) $
 
 - 如果是向量y对向量x的导数，称为雅各比矩阵
 
-$ \mathbf{J} = \frac{\partial \mathbf{y}}{\partial \mathbf{x}} = 
+$$
+\mathbf{J} = \frac{\partial \mathbf{y}}{\partial \mathbf{x}} =
 \begin{bmatrix}
     \frac{\partial y_1}{\partial x_1} & \frac{\partial y_1}{\partial x_2} & \cdots & \frac{\partial y_1}{\partial x_n} \\
     \frac{\partial y_2}{\partial x_1} & \frac{\partial y_2}{\partial x_2} & \cdots & \frac{\partial y_2}{\partial x_n} \\
     \vdots & \vdots & \ddots & \vdots \\
     \frac{\partial y_m}{\partial x_1} & \frac{\partial y_m}{\partial x_2} & \cdots & \frac{\partial y_m}{\partial x_n}
-\end{bmatrix} $
+\end{bmatrix}
+$$
 
 - 如果极端一点，是标量对x向量的导数
 
-$ \frac{\partial L}{\partial \mathbf{x}} = 
-\big[ \frac{\partial L}{\partial x_1}, \dots, \frac{\partial L}{\partial x_n} \big] $ 
+$$
+\frac{\partial L}{\partial \mathbf{x}} =
+\big[ \frac{\partial L}{\partial x_1}, \dots, \frac{\partial L}{\partial x_n} \big]
+$$
 
 - 链式法则仍然适用，只不过中间元素都是雅各比
 

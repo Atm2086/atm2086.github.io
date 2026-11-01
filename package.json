@@ -5,7 +5,8 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "server": "hexo server"
+    "server": "hexo server",
+    "test:math": "node --test test/math-rendering.test.js"
   },
   "hexo": {
     "version": "7.3.0"
@@ -26,6 +27,8 @@
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
-    "hexo-wordcount": "^6.0.1"
+    "hexo-wordcount": "^6.0.1",
+    "katex": "0.16.22",
+    "marked-katex-extension": "5.1.13"
   }
 }
