@@ -3,13 +3,14 @@ title: 从 HIPSX 到 COMGR，从 静态编译 到 运行时
 date: 2026-09-14 00:47:00
 updated: 2026-09-16
 categories:
-  - AI 编译器
+  - LLVM GPU后端
 tags:
   - LLVM
   - Clang
   - ROCm
   - COMGR
   - SXGPU
+  - 运行时编译
 toc: true
 mermaid: true
 ---

@@ -2,8 +2,14 @@
 layout: posts
 title: GPU学习
 date: 2025-10-30 16:43:20
-category: GPU && operator
-tags: Cuda，并行编程
+tags:
+  - GPU
+  - CUDA
+  - 并行编程
+  - 内存管理
+  - 性能优化
+categories:
+  - GPU && operator
 ---
 预计学习时间：
 - 11.9号前学完(刚好完成)

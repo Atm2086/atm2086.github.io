@@ -8,7 +8,12 @@ date: 2026-10-31 09:43:27
 password:
 summary:
 tags:
+  - LLVM
+  - LLVM IR
+  - Value
+  - Use-Def
 categories:
+  - LLVM架构设计
 ---
 
 # Value

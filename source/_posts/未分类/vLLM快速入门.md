@@ -8,6 +8,10 @@ date: 2025-11-24 19:45:17
 password:
 summary:
 tags:
+  - 深度学习
+  - RNN
+  - LSTM
+  - 序列建模
 categories:
 ---
 

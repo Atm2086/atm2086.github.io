@@ -8,6 +8,10 @@ date: 2025-11-13 20:50:43
 password:
 summary:
 tags:
+  - HPC
+  - AI Infra
+  - CUDA
+  - 学习规划
 categories:
 ---
 

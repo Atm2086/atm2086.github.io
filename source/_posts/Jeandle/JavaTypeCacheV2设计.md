@@ -8,7 +8,13 @@ date: 2026-10-30 09:49:12
 password:
 summary:
 tags:
+  - Jeandle
+  - JavaType
+  - LLVM
+  - 缓存设计
+  - 缓存失效
 categories:
+  - Jeandle
 ---
 
 # 总设计

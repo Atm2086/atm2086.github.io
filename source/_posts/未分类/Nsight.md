@@ -8,6 +8,11 @@ date: 2025-11-02 16:59:43
 password:
 summary:
 tags:
+  - Nsight Systems
+  - Nsight Compute
+  - CUDA
+  - 性能分析
+  - 性能优化
 categories:
 ---
 

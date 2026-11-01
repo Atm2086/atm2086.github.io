@@ -8,6 +8,10 @@ date: 2025-11-03 16:08:35
 password:
 summary:
 tags:
+  - CUDA
+  - CUDA Toolkit
+  - Ubuntu
+  - 包管理
 categories:
 ---
 

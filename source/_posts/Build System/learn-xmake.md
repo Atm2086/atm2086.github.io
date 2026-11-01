@@ -7,8 +7,13 @@ mathjax: true
 date: 2025-12-23 08:51:52
 password:
 summary:
-tags: 构建系统 xmake
-categories: Build System
+tags:
+  - xmake
+  - 构建系统
+  - C++
+  - 依赖管理
+categories:
+  - Build System
 ---
 
 起因： InifitCore 和 InifitLM 都是基于Xmake构建的，Xmake 基于 Lua 的轻量级跨平台构建工具，使用 xmake.lua 维护项目构建，相比 makefile/CMakeLists.txt，配置语法更加简洁直观，对新手非常友好，短时间内就能快速入门，能够让用户把更多的精力集中在实际的项目开发上。

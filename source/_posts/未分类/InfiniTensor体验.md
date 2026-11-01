@@ -8,6 +8,11 @@ date: 2025-11-14 20:40:06
 password:
 summary:
 tags:
+  - InfiniTensor
+  - InfiniCore
+  - Triton
+  - NineToothed
+  - 算子优化
 categories:
 ---
 

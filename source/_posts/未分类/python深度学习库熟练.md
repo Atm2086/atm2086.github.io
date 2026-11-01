@@ -8,6 +8,9 @@ date: 2025-12-24 22:05:50
 password:
 summary:
 tags:
+  - Python
+  - NumPy
+  - 面向对象编程
 categories:
 ---
 

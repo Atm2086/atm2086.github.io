@@ -7,8 +7,13 @@ mathjax: true
 date: 2025-12-25 11:49:06
 password:
 summary:
-tags: 算子
-categories: InfiniCore & InfiniLM 学习
+tags:
+  - InfiniCore
+  - Linux
+  - Shell
+  - Slurm
+categories:
+  - InfiniCore & InfiniLM 学习
 ---
 
 # 相关问题记录

@@ -7,8 +7,15 @@ mathjax: true
 date: 2026-01-11 21:39:46
 password:
 summary:
-tags: DL-Framework, DeZero, Deep-Learning
-categories: DL-Framework Learning & infra learning
+tags:
+  - 深度学习框架
+  - DeZero
+  - 自动微分
+  - 高阶导数
+  - 神经网络
+  - 张量
+categories:
+  - DL-Framework Learning & infra learning
 ---
 
 # 起
